@@ -6,7 +6,7 @@ export default function Pokemon() {
       <h2>Pokemon name: {"Charizard"}</h2>
       <p>Weight: {90} kg</p>
       <p>Awesome: {true}</p>
-      <p>Terrifying: {false}</p>
+      <p>Terrifying: {false ? "very" : "nah, lovable"}</p>
       <p>What about null? {null}</p>
       <p>And undefined? {undefined}</p>
       <p>Abilities: {["Blaze", "Solar power", "Tough claws", "Drought"]}</p>
