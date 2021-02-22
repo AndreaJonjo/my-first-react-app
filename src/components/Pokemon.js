@@ -7,7 +7,7 @@ export default function Pokemon(props) {
       <p>Weight: {props.weight} kg</p>
       <p>Awesome: {props.awesome ? "YES!" : "nope, not really"}</p>
       <p>Terrifying: {props.terrifying ? "very" : "nah, lovable"}</p>
-      <p>Abilities:</p>
+      <p>Abilities:{abilities.lenght}</p>
       <ul>
         {props.abilities.map((ability) => {
           return <li>{ability}</li>;
