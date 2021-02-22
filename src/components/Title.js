@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Title() {
-  return <h1>Hi There!</h1>;
+export default function Title(props) {
+  return <h1>{props.content}</h1>;
 }
