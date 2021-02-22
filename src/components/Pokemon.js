@@ -9,6 +9,7 @@ export default function Pokemon() {
       <p>Terrifying: {false}</p>
       <p>What about null? {null}</p>
       <p>And undefined? {undefined}</p>
+      <p>Types: {{ fire: true, water: false }}</p>
     </div>
   );
 }
