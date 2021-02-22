@@ -1,9 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Title from "./components/Title";
 
 function App() {
   return (
     <div className="App">
+      <main>
+        <Title />
+      </main>
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -15,7 +20,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Welcome to codaisseur
+          Learn React
         </a>
       </header>
     </div>
