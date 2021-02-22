@@ -10,7 +10,36 @@ function App() {
         <Title />
       </main>
       <Title content="Andrea's simple title" />
-      <Pokemon />
+      <Pokemon
+        name="Charizard"
+        weight="90 kg"
+        awesome={true}
+        terrifying={false}
+        abilities={["Blaze", "Solar power", "Tough claws", "Drought"]}
+      />
+
+      <Pokemon
+        name="Bulbasour"
+        weight="6.9 kg"
+        awesome={true}
+        terrifying={false}
+        abilities={["Overgrow", "Chlorophyll"]}
+      />
+
+      <Pokemon
+        name="Mewtwo"
+        weight="122 kg"
+        awesome={true}
+        terrifying={true}
+        abilities={["Pressure", "Unnerve", "Steadfast", "Insomnia"]}
+      />
+      <Pokemon
+        name="Mega beedrill"
+        weight="65 kg"
+        awesome={false}
+        terrifying={true}
+        abilities={["Intimidate", "Unnerve"]}
+      />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
