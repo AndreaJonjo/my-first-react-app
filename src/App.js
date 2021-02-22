@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Title from "./components/Title";
+import Pokemon from "./components/Pokemon";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Title />
       </main>
       <Title content="Andrea's simple title" />
+      <Pokemon />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
