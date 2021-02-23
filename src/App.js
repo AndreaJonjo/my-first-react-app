@@ -5,6 +5,8 @@ import Title from "./components/Title";
 import Pokemon from "./components/Pokemon/Pokemon";
 import LikeCounter from "./components/LikeCounter";
 import LikeButton from "./components/LikeButton";
+import AwesomeAnimals from "./components/AwesomeAnimals";
+import ArticleList from "./components/ArticleList";
 
 const all_pokemon = [
   {
@@ -37,11 +39,41 @@ const all_pokemon = [
   },
 ];
 
+const all_animals = [
+  {
+    name: "Chicken",
+    awesome: 1,
+  },
+  {
+    name: "Sloth",
+    awesome: 2,
+  },
+  {
+    name: "Porcupine",
+    awesome: 3,
+  },
+  {
+    name: "Killer whale",
+    awesome: 4,
+  },
+  {
+    name: "Velociraptor",
+    awesome: 5,
+  },
+];
+
 function App() {
   return (
     <main className="container">
       <Title content="Some Simple Title" />
       <LikeCounter />
+      <div className="row">
+        {all_animals.map((animals) => (
+          <div className="col-md-6 col-lg-2">
+            <AwesomeAnimals awesome={animals.awesome} name={animals.name} />
+          </div>
+        ))}
+      </div>
       <div className="row">
         {all_pokemon.map((pokemon) => (
           <div className="col-md-6 col-lg-3">
@@ -55,6 +87,9 @@ function App() {
             <LikeButton />
           </div>
         ))}
+      </div>
+      <div>
+        <ArticleList />
       </div>
     </main>
   );
