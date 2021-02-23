@@ -1,60 +1,62 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
+
 import Title from "./components/Title";
-import Pokemon from "./components/Pokemon";
+import Pokemon from "./components/Pokemon/Pokemon";
+import LikeCounter from "./components/LikeCounter";
+import LikeButton from "./components/LikeButton";
+
+const all_pokemon = [
+  {
+    name: "Charizard",
+    weight: 90,
+    awesome: true,
+    terrifying: false,
+    abilities: ["Blaze", "Solar power", "Tough claws", "Drought"],
+  },
+  {
+    name: "Bulbasaur",
+    weight: 6.9,
+    awesome: true,
+    terrifying: false,
+    abilities: ["Overgrow", "Chlorophyll"],
+  },
+  {
+    name: "Mewtwo",
+    weight: 122,
+    awesome: true,
+    terrifying: true,
+    abilities: ["Pressure", "Unnerve", "Steadfast", "Insomnia"],
+  },
+  {
+    name: "Mega beedrill",
+    weight: 65,
+    awesome: false,
+    terrifying: true,
+    abilities: ["Intimidate", "Unnerve"],
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <main>
-        <Title />
-      </main>
-      <Title content="Andrea's simple title" />
-      <Pokemon
-        name="Charizard"
-        weight="90 kg"
-        awesome={true}
-        terrifying={false}
-        abilities={["Blaze", "Solar power", "Tough claws", "Drought"]}
-      />
-
-      <Pokemon
-        name="Bulbasour"
-        weight="6.9 kg"
-        awesome={true}
-        terrifying={false}
-        abilities={["Overgrow", "Chlorophyll"]}
-      />
-
-      <Pokemon
-        name="Mewtwo"
-        weight="122 kg"
-        awesome={true}
-        terrifying={true}
-        abilities={["Pressure", "Unnerve", "Steadfast", "Insomnia"]}
-      />
-      <Pokemon
-        name="Mega beedrill"
-        weight="65 kg"
-        awesome={false}
-        terrifying={true}
-        abilities={["Intimidate", "Unnerve"]}
-      />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="container">
+      <Title content="Some Simple Title" />
+      <LikeCounter />
+      <div className="row">
+        {all_pokemon.map((pokemon) => (
+          <div className="col-md-6 col-lg-3">
+            <Pokemon
+              name={pokemon.name}
+              weight={pokemon.weight}
+              awesome={pokemon.awesome}
+              terrifying={pokemon.terrifying}
+              abilities={pokemon.abilities}
+            />
+            <LikeButton />
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
 
